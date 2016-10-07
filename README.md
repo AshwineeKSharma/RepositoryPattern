@@ -38,22 +38,21 @@ namespace WebApplication.Repository.Interfaces<br>
 {
 <br>
    public interface ICustomerRepository<br>
-    {
-
-        List<Customer> GetCustomers();
-       Customer GetCustomer(int id);
-       void InsertCustomer(Customer cust);
-       void UpdateCustomer(Customer cust);
-       void DeleteCustomer(int id);
-       void SaveCustomer();
-
-    }
-}
+    {<br>
+        List<Customer> GetCustomers();<br>
+       Customer GetCustomer(int id);<br>
+       void InsertCustomer(Customer cust);<br>
+       void UpdateCustomer(Customer cust);<br>
+       void DeleteCustomer(int id);<br>
+       void SaveCustomer();<br>
+<br>
+    }<br>
+}<br>
 </p>
         
         
         <p>Implement Interface
-        Implementation Code Goes Here</p>
+        <u><b>Implementation Code Goes Here</b><u></p>
 <p>
 using System;<br>
 using System.Collections.Generic;<br>
@@ -65,46 +64,46 @@ using WebApplication.Data.Models;<br>
 using WebApplication.Repository.Interfaces;<br>
 using System.Data.Entity;<br>
 namespace WebApplication.Repository.Implementation<br>
-{
-  public class CustomerRepository:ICustomerRepository
-    {
-      private CustomerDBContext db=new CustomerDBContext();
-   
-        public List<Customer> GetCustomers()
-        {
-            return db.Customers.ToList();
-        }
+{<br>
+  public class CustomerRepository:ICustomerRepository<br>
+    {<br>
+      private CustomerDBContext db=new CustomerDBContext();<br>
+   <br>
+        public List<Customer> GetCustomers()<br>
+        {<br>
+            return db.Customers.ToList();<br>
+        }<br>
+<br>
+        public Customer GetCustomer(int id)<br>
+        {<br>
+            return db.Customers.Find(id);<br>
+            <br>
+        }<br>
 
-        public Customer GetCustomer(int id)
-        {
-            return db.Customers.Find(id);
-            
-        }
+        public void InsertCustomer(Customer cust)<br>
+        {<br>
+            db.Customers.Add(cust);<br>
+        }<br>
+<br>
+        public void UpdateCustomer(Customer cust)<br>
+        {<br>
+            db.Entry(cust).State = EntityState.Modified;<br>
+        }<br>
 
-        public void InsertCustomer(Customer cust)
+        public void DeleteCustomer(int id)<br>
         {
-            db.Customers.Add(cust);
-        }
+            Customer existing = db.Customers.Find(id);<br>
+            db.Customers.Remove(existing);<br>
+        }<br>
 
-        public void UpdateCustomer(Customer cust)
-        {
-            db.Entry(cust).State = EntityState.Modified;
-        }
-
-        public void DeleteCustomer(int id)
-        {
-            Customer existing = db.Customers.Find(id);
-            db.Customers.Remove(existing);
-        }
-
-        public void SaveCustomer()
-        {
-            db.SaveChanges();
-        }
-    }
-}
+        public void SaveCustomer()<br>
+        {<br>
+            db.SaveChanges();<br>
+        }<br>
+    }<br>
+}<br>
         
-        -->
+</p>
         
 6. Work For Service(Class Library)
      <p> Add Reference<br>
@@ -126,11 +125,11 @@ namespace WebApplication.Service.Interfaces<br>
     public interface ICustomerService<br>
     {<br>
         
-        List<Customer> GetCustomers();
-        Customer GetCustomer(int id);
-        void InsertCustomer(Customer cust);
-        void UpdateCustomer(Customer cust);
-        void DeleteCustomer(int id);
+        List<Customer> GetCustomers();<br>
+        Customer GetCustomer(int id);<br>
+        void InsertCustomer(Customer cust);<br>
+        void UpdateCustomer(Customer cust);<br>
+        void DeleteCustomer(int id);<br>
         void SaveCustomer();<br>
     }
     <br>
@@ -155,47 +154,47 @@ namespace WebApplication.Service.Implementation<br>
 {<br>
     public class CustomerService:ICustomerService<br>
     {<br>
-        private ICustomerRepository db = new CustomerRepository();
-        public List<Customer> GetCustomers()
-        {
-            return db.GetCustomers();
-        }
+        private ICustomerRepository db = new CustomerRepository();<br>
+        public List<Customer> GetCustomers()<br>
+        {<br>
+            return db.GetCustomers();<br>
+        }<br>
 
-        public Customer GetCustomer(int id)
-        {
-            return db.GetCustomer(id);
-        }
+        public Customer GetCustomer(int id)<br>
+        {<br>
+            return db.GetCustomer(id);<br>
+        }<br>
+<br>
+        public void InsertCustomer(Customer cust)<br>
+        {<br>
+            db.InsertCustomer(cust);<br>
+        }<br>
 
-        public void InsertCustomer(Customer cust)
-        {
-            db.InsertCustomer(cust);
-        }
-
-        public void UpdateCustomer(Customer cust)
-        {
-            db.UpdateCustomer(cust);
-        }
-
-        public void DeleteCustomer(int id)
-        {
-            db.DeleteCustomer(id);
-        }
-
-        public void SaveCustomer()
-        {
-            db.SaveCustomer();
-        }
-    }
-}
-                
+        public void UpdateCustomer(Customer cust)<br>
+        {<br>
+            db.UpdateCustomer(cust);<br>
+        }<br>
+<br>
+        public void DeleteCustomer(int id)<br>
+        {<br>
+            db.DeleteCustomer(id);<br>
+        }<br>
+<br>
+        public void SaveCustomer()<br>
+        {<br>
+            db.SaveCustomer();<br>
+        }<br>
+    }<br>
+}<br>
+                <br>
                 </p>
                 
                 
 7. Working With UI Controller(Application.Client)
 
-<p>Controller Code Goes Here</p>
+<p><u><b>Controller Code Goes Here</b></u></p>
       
-          <!--
+<p>
           using System;
 using System.Collections.Generic;
 using System.Data;
@@ -315,7 +314,7 @@ namespace WebApplication.Client.Controllers
 }
 
           
-          -->
+          </p>
         
 Check View and Evaluate!!!!
         
