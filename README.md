@@ -3,24 +3,24 @@ Repository Pattern Code and Reference
 
 
 1. Code First Entity Framework
-    Application.Data (Class Library)
-      Create Model/s)
-      Install Entity Framework Nuget Package
-      Create Context/s
-      Add Connection Strings
-      Enable-Migrations
-      Add-Migration MigrationName
-      Update-Database -Verbose
+    <!--Application.Data (Class Library)-->
+     <!-- Create Model/s)-->
+      <!--Install Entity Framework Nuget Package-->
+     <!-- Create Context/s-->
+     <!-- Add Connection Strings-->
+     <!-- Enable-Migrations-->
+      Add-Migration MigrationName-->
+      <!--Update-Database -Verbose-->
       
 2.Add class Library Packages 
-      Repository
-      Service
+     <!--Repository-->
+      <!--Service-->
       
 3.Add UI Project(Application.Client)
-      Add References
+     <!-- Add References
           Application.Data
           Application.Repository
-          Application.Service
+          Application.Service-->
           
 4.Use Required Folder Structure
 5. Work For Repository
