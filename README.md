@@ -137,9 +137,9 @@ namespace WebApplication.Service.Interfaces<br>
     </p>
             
      <p> Implement Interface<br>
-     <u><b>Interface Code Goes Here</b></u><p>
-                <p>
-                
+     <u><b>Interface Code Goes Here</b></u></p>
+       
+<p>             
 using System;<br>
 using System.Collections.Generic;<br>
 using System.Linq;<br>
