@@ -3,29 +3,29 @@ Repository Pattern Code and Reference
 
 
 1. Code First Entity Framework
-    <!--Application.Data (Class Library)-->
-     <!-- Create Model/s)-->
-      <!--Install Entity Framework Nuget Package-->
-     <!-- Create Context/s-->
-     <!-- Add Connection Strings-->
-     <!-- Enable-Migrations-->
-      Add-Migration MigrationName-->
-      <!--Update-Database -Verbose-->
+    <p>Application.Data (Class Library)<br>
+        Create Model/s)<br>
+        Install Entity Framework Nuget Package<br>
+        Create Context/s<br>
+        Add Connection Strings<br>
+        Enable-Migrations<br>
+        Add-Migration MigrationName<br>
+        Update-Database -Verbose</p>
       
 2.Add class Library Packages 
-     <!--Repository-->
-      <!--Service-->
+     <p>Repository<br>
+      Service</p>
       
 3.Add UI Project(Application.Client)
-     <!-- Add References
-          Application.Data
-          Application.Repository
-          Application.Service-->
+     <p>Add References<br>
+          Application.Data<br>
+          Application.Repository<br>
+          Application.Service</p>
           
 4.Use Required Folder Structure
 5. Work For Repository
-      Create New Interface
-        InterFace Code Goes Here
+      <p>Create New Interface<br>
+        InterFace Code Goes Here</p>
    <!--
         using System;
 using System.Collections.Generic;
@@ -51,8 +51,8 @@ namespace WebApplication.Repository.Interfaces
         -->
         
         
-        Implement Interface
-        Implementation Code Goes Here
+        <p>Implement Interface
+        Implementation Code Goes Here</p>
         <!--
         using System;
 using System.Collections.Generic;
@@ -106,9 +106,9 @@ namespace WebApplication.Repository.Implementation
         -->
         
 6. Work For Service(Class Library)
-      Add Reference
-      Create Interface 
-        Interface Code Goes Here
+     <p> Add Reference<br>
+      Create Interface <br>
+        <u><b>Interface Code Goes Here</b></u><p>
             <!--
                 using System;
 using System.Collections.Generic;
@@ -136,8 +136,8 @@ namespace WebApplication.Service.Interfaces
             
             -->
             
-      Implement Interface
-            Interface Code Goes Here
+     <p> Implement Interface<br>
+     <u><b>Interface Code Goes Here</b></u><p>
                 <!--
                 
                   using System;
@@ -192,7 +192,7 @@ namespace WebApplication.Service.Implementation
                 
 7. Working With UI Controller(Application.Client)
 
-      Controller Code Goes Here
+<p>Controller Code Goes Here</p>
       
           <!--
           using System;
