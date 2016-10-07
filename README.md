@@ -25,7 +25,8 @@ Repository Pattern Code and Reference
 4.Use Required Folder Structure<br>
 5. Work For Repository<br>
       <p>Create New Interface<br>
-        <u><b>InterFace Code Goes Here</b></u></p>
+        <u><b>InterFace Code Goes Here</b></u>
+      </p>
 <p>
 using System;<br>
 using System.Collections.Generic;<br>
