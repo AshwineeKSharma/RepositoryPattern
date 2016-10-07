@@ -52,7 +52,7 @@ namespace WebApplication.Repository.Interfaces<br>
         
         
         <p>Implement Interface
-        <u><b>Implementation Code Goes Here</b><u></p>
+        <u><b>Implementation Code Goes Here</b></u></p>
 <p>
 using System;<br>
 using System.Collections.Generic;<br>
