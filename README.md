@@ -22,21 +22,22 @@ Repository Pattern Code and Reference
           Application.Repository<br>
           Application.Service</p>
           
-4.Use Required Folder Structure
-5. Work For Repository
+4.Use Required Folder Structure<br>
+5. Work For Repository<br>
       <p>Create New Interface<br>
-        InterFace Code Goes Here</p>
-   <!--
-        using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebApplication.Data.Models;
-
-namespace WebApplication.Repository.Interfaces
+        <u><b>InterFace Code Goes Here</b></u></p>
+<p>
+using System;<br>
+using System.Collections.Generic;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using WebApplication.Data.Models;<br>
+<br>
+namespace WebApplication.Repository.Interfaces<br>
 {
-   public interface ICustomerRepository
+<br>
+   public interface ICustomerRepository<br>
     {
 
         List<Customer> GetCustomers();
@@ -48,22 +49,22 @@ namespace WebApplication.Repository.Interfaces
 
     }
 }
-        -->
+</p>
         
         
         <p>Implement Interface
         Implementation Code Goes Here</p>
-        <!--
-        using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebApplication.Data.Contexts;
-using WebApplication.Data.Models;
-using WebApplication.Repository.Interfaces;
-using System.Data.Entity;
-namespace WebApplication.Repository.Implementation
+<p>
+using System;<br>
+using System.Collections.Generic;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using WebApplication.Data.Contexts;<br>
+using WebApplication.Data.Models;<br>
+using WebApplication.Repository.Interfaces;<br>
+using System.Data.Entity;<br>
+namespace WebApplication.Repository.Implementation<br>
 {
   public class CustomerRepository:ICustomerRepository
     {
@@ -108,52 +109,52 @@ namespace WebApplication.Repository.Implementation
 6. Work For Service(Class Library)
      <p> Add Reference<br>
       Create Interface <br>
-        <u><b>Interface Code Goes Here</b></u><p>
-            <!--
-                using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebApplication.Data.Models;
-using WebApplication.Repository.Implementation;
-using WebApplication.Repository.Interfaces;
+        <u><b>Interface Code Goes Here</b></u></p>
+            
+<p>using System;<br>
+using System.Collections.Generic;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using WebApplication.Data.Models;<br>
+using WebApplication.Repository.Implementation;<br>
+using WebApplication.Repository.Interfaces;<br>
 
-namespace WebApplication.Service.Interfaces
-{
+namespace WebApplication.Service.Interfaces<br>
+{<br>
      
-    public interface ICustomerService
-    {
+    public interface ICustomerService<br>
+    {<br>
         
         List<Customer> GetCustomers();
         Customer GetCustomer(int id);
         void InsertCustomer(Customer cust);
         void UpdateCustomer(Customer cust);
         void DeleteCustomer(int id);
-        void SaveCustomer();
+        void SaveCustomer();<br>
     }
-}
-            
-            -->
+    <br>
+    }
+    </p>
             
      <p> Implement Interface<br>
      <u><b>Interface Code Goes Here</b></u><p>
-                <!--
+                <p>
                 
-                  using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebApplication.Data.Models;
-using WebApplication.Repository.Implementation;
-using WebApplication.Repository.Interfaces;
-using WebApplication.Service.Interfaces;
+using System;<br>
+using System.Collections.Generic;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using WebApplication.Data.Models;<br>
+using WebApplication.Repository.Implementation;<br>
+using WebApplication.Repository.Interfaces;<br>
+using WebApplication.Service.Interfaces;<br>
 
-namespace WebApplication.Service.Implementation
-{
-    public class CustomerService:ICustomerService
-    {
+namespace WebApplication.Service.Implementation<br>
+{<br>
+    public class CustomerService:ICustomerService<br>
+    {<br>
         private ICustomerRepository db = new CustomerRepository();
         public List<Customer> GetCustomers()
         {
@@ -187,7 +188,7 @@ namespace WebApplication.Service.Implementation
     }
 }
                 
-                -->
+                </p>
                 
                 
 7. Working With UI Controller(Application.Client)
