@@ -53,8 +53,8 @@ namespace WebApplication.Repository.Interfaces<br>
         
         
         <p>Implement Interface</p>
-        
-        <p><u><b>Implementation Code Goes Here</b></u>
+        <p>
+        <u><b>Implementation Code Goes Here</b></u>
       </p>
 <p>
 using System;<br>
